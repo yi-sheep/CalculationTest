@@ -40,6 +40,7 @@ public class LoseFragment extends Fragment {
         binding.button.setOnClickListener(v -> {
             NavController controller = Navigation.findNavController(v);
             controller.navigate(R.id.action_loseFragment_to_titleFragment);
+            viewModel.getCurrentScore().setValue(0);
         });
         return binding.getRoot();
         // Inflate the layout for this fragment
